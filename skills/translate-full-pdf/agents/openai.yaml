@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Full PDF"
+  short_description: "Translate complete PDFs while preserving layout and images."
+  default_prompt: "Translate this full PDF into Chinese, preserve the original layout and images, and export a translated PDF."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Comprehensive Paper Analysis"
+  short_description: "Deep Chinese explanations for papers"
+  default_prompt: "Use $comprehensive-paper-analysis to explain this paper from beginning to end in Chinese, including every figure and key parameter."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Paper Aspect Review"
+  short_description: "Deep comparison on one theme across papers"
+  default_prompt: "Use $multi-paper-aspect-review to extract and compare one focused theme across these papers."

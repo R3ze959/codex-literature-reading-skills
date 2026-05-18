@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-paper Materials Review"
+  short_description: "Linked reviews for materials papers"
+  default_prompt: "Use $multi-paper-materials-review to synthesize several papers on one battery material into a Chinese linked-analysis report."

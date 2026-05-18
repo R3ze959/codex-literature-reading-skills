@@ -1,0 +1,43 @@
+# Python and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Generated literature outputs and source papers
+*.pdf
+!examples/
+!examples/*.pdf
+*.docx
+*.pptx
+*.xlsx
+*.csv
+*.tsv
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
+*.svg
+
+# Translation/intermediate artifacts
+*.json
+*.log
+*.tmp
+cache/
+caches/
+outputs/
+archive/
+Skill生成结果_含原始文献PDF归档/
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
