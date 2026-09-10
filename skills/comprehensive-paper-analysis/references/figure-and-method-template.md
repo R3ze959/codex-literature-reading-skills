@@ -1,99 +1,46 @@
-# Figure and Methods Template
+# Full-paper reading aids
 
-Use this reference for full single-paper explanation reports.
+Use these prompts for a comprehensive reading. Select relevant fields and merge them into natural prose or compact tables; this is an extraction aid, not a mandatory report outline.
 
-## Whole-Paper Analysis Block
+## Argument and figure coverage
 
-Before figure-by-figure explanation, include these dimensions:
+Build a small inventory of main figures/tables, their panels, source pages, and coverage status. Mark unreadable or unavailable items instead of silently skipping them. For a focused user request, the inventory covers only its scope.
 
-1. **研究问题拆解**
-   - The practical or scientific problem.
-   - Why prior work is insufficient.
-   - What variable, material design, mechanism, or method the paper focuses on.
+For each figure/table, establish:
 
-2. **作者假设与设计逻辑**
-   - What the authors believe will solve the problem.
-   - Why the selected material/method should work.
-   - Which assumptions are explicit and which are implicit.
+- The question, experimental/calculation object, and comparison groups.
+- What each panel measures; axes, units, legend, colors/symbols, scale bars, and relevant conditions.
+- The key reported values or visible trends. Label approximate plot readings; never present digitized or OCR-derived estimates as exact published values.
+- Which conclusion follows directly, how the authors interpret it, and what it cannot establish.
+- How the result connects to the preceding evidence and the paper's central claim.
 
-3. **论证链**
-   - Claim 1 → supporting experiment/figure/table → key evidence → residual uncertainty.
-   - Claim 2 → supporting experiment/figure/table → key evidence → residual uncertainty.
-   - Final conclusion → combined evidence → overclaim risk.
+Inspect the image and caption together. A method or SI passage may qualify an apparently decisive plot. A correlation, fitted curve, or proposed schematic alone does not establish a unique mechanism.
 
-4. **创新性分析**
-   - New material/composition/structure.
-   - New synthesis or processing route.
-   - New mechanism insight.
-   - New test condition or practical validation.
-   - New comparison standard or application scenario.
+## Reproducibility details
 
-5. **可靠性与局限**
-   - Controls and baselines.
-   - Sample size/reproducibility.
-   - Whether test conditions are practical or only idealized.
-   - Whether performance metrics are fairly compared.
-   - Missing characterization or missing long-term validation.
+Extract only fields relevant to the discipline and the user's purpose. Use `未报道` for absent details and `未提供SI，无法确认` when the detail may be in missing SI.
 
-## Figure Explanation Block
+| Area | Useful details |
+| --- | --- |
+| Sample or population | Identity, preparation/selection, composition, controls, sample size, repeats |
+| Preparation | Precursors/ratios, solvents, atmosphere, temperature/time, processing history |
+| Measurement | Instrument/method, geometry, temperature/environment, reference/baseline, resolution |
+| Computation | Model/structure, boundary conditions, convergence, approximations, fitted parameters |
+| Processing | Equations, variable definitions, units, normalization, exclusion rules, uncertainty |
 
-For each figure, use this structure:
+For battery studies, condition comparisons on cell type, electrode composition and loading, capacity mass basis, voltage window, current/rate definition, temperature, pressure when relevant, and cycling/rest history. Extract CV/EIS/GITT settings when those results support a claim; do not infer missing amplitudes, scan rates, or fit assumptions. State the paper's efficiency/retention definitions before comparing values, since conventions and denominators can differ.
 
-1. **这张图想回答什么问题**
-2. **实验/计算对象是什么**
-3. **横轴、纵轴、单位、颜色、符号分别代表什么**
-4. **每个 panel 的读图步骤**
-5. **关键数值**
-6. **作者用它支持什么结论**
-7. **初学者容易误解的地方**
-8. **这张图和前后图的关系**
+## Claim audit
 
-## Methods Extraction Checklist
+A compact evidence table can use:
 
-| Category | Details to extract |
-|---|---|
-| Material synthesis | Precursors, ratios, solvent, pH, atmosphere, temperature, time, heating rate, washing/drying/calcination |
-| Electrode preparation | Active material, conductive agent, binder, mass ratio, solvent, slurry process, current collector, loading, electrode thickness |
-| Cell assembly | Cell format, counter/reference electrode, electrolyte, separator, pressure, atmosphere |
-| Electrochemical testing | Voltage window, rate/current density, C-rate definition, temperature, activation, cycle count, rest time |
-| Characterization | XRD, Rietveld, SEM/TEM, XPS, Raman, BET, TGA, CV, EIS, GITT, in/ex situ methods |
-| Data processing | Capacity basis, retention formula, CE/ICE, diffusion coefficient equation, fitting model |
+| Claim | Source locator and observation | Conditions/controls | Interpretation and residual uncertainty |
+| --- | --- | --- | --- |
 
-## Evidence Chain Table
+Assess the strongest claims first. Check whether a baseline differs in several variables, whether uncertainty/repeats are adequate for the asserted effect, and whether calculations or post-mortem observations establish the proposed operating mechanism. Propose the control that best discriminates the leading explanations.
 
-| Author claim | Evidence used | Strong points | Weak points | Best follow-up experiment |
-|---|---|---|---|---|
+For novelty, distinguish `作者声称`, `本文证据可确认`, and `需外部文献比较`. Explain what the study adds under its tested conditions; do not turn a promising result into a general performance ranking.
 
-## Novelty and Contribution Table
+## Teaching and reusable text
 
-| Claimed novelty | Evidence in paper | How strong is it? | What literature comparison is needed? |
-|---|---|---|---|
-
-## Critical Reading Questions
-
-- If the headline performance is high, is it measured at a practical mass loading?
-- Is the comparison baseline synthesized/tested under the same conditions?
-- Are voltage window, rate definition, and capacity basis consistent?
-- Does the mechanism rely on direct in/ex situ evidence, or only post-mortem characterization?
-- Are morphology, carbon content, electrolyte amount, or electrode thickness responsible for part of the improvement?
-- Does the paper show long-cycle stability after activation, or only short-term performance?
-- Does the full-cell result support the half-cell claim?
-- What single missing control would most change confidence in the paper?
-
-## Beginner Parameter Explanation Pattern
-
-Use this order:
-
-`参数名称 → 它衡量什么 → 单位是什么意思 → 图中如何读取 → 数值高/低通常意味着什么 → 本文中作者如何解释`
-
-Example:
-
-`库仑效率 η 衡量充进去的电荷有多少能在放电时回来，通常写成 discharge capacity / charge capacity × 100%。如果 η 接近 100%，说明副反应少、可逆性好；如果首圈 η 很低，往往说明形成 SEI 或不可逆嵌锂/转化反应消耗了锂。`
-
-## Review and PPT Wording
-
-- `该工作围绕{问题}提出了{策略}，通过{关键表征/测试}证明{核心结论}。`
-- `从 Figure {n} 可以看出，{关键数据}直接支持{结论}，但该结果仍受{测试条件/对照不足}限制。`
-- `该论文的价值不只在于性能提升，还在于将{结构/界面/动力学}与{电化学行为}建立了对应关系。`
-- `从论证链来看，作者首先通过{结构/形貌证据}证明{材料设计成立}，随后利用{电化学数据}证明{性能改善}，最后借助{机理表征}解释{改善来源}。`
-- `需要注意的是，本文的结论主要建立在{测试条件}下；若要证明其实用价值，还需要在{高负载/全电池/长循环/温度窗口/规模化合成}条件下进一步验证。`
+Explain a difficult parameter as `what it measures → units/assumptions → how to read it here → what this result means and does not mean`. Keep the explanation tied to the actual figure. Glossaries and review-ready paragraphs are optional; avoid restating the same claim in several fixed sections.

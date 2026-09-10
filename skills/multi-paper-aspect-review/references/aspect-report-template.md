@@ -1,65 +1,47 @@
-# Focused Aspect Report Template
+# Full focused-review reference
 
-Use this template when producing a full focused-aspect review from multiple papers.
+Read for a full report on one aspect. Adapt the evidence fields and organization to the actual question; do not expand the task to every topic or require every table below.
 
-## Aspect Card Schema
+## Aspect records
+
+Cover the selected aspect throughout each supplied paper and relevant SI, including methods, controls, captions, and contrary results. Record a paper with no relevant evidence as such instead of silently dropping it.
 
 | Field | Content |
-| --- | --- |
-| Bibliography | Title, year, journal, and first/corresponding author if useful |
-| Aspect relevance | Why this paper matters for the selected aspect |
-| Direct evidence | Reported statements, data, figures, tables, or page references |
-| Quantitative values | Values, units, original state, and normalized value if appropriate |
-| Measurement conditions | Technique, temperature, SOC, voltage window, C-rate, loading, cell type, atmosphere, synthesis state |
-| Author interpretation | Mechanism or conclusion proposed by the paper |
-| Codex inference | Cross-paper interpretation, clearly marked as inference |
-| Limitations | Missing controls, ambiguity, unfair comparison, or weak evidence |
+|---|---|
+| Source | Paper ID, version, title/DOI, relevant page/figure/panel/table or section |
+| Relevance | Which subquestion the evidence addresses |
+| Direct observation | Reported measurement/computation and what was actually compared |
+| Quantity | Original value, units, denominator/reference state, uncertainty and any conversion |
+| Conditions | Material/sample, technique/model, temperature, SOC, voltage/current, loading, cell type, history |
+| Interpretation | Author explanation, then separately the reviewer inference and alternatives |
+| Limits | Controls, resolution, reproducibility, source-access gaps, non-comparability |
 
-## Comparison Tables
+A theme evidence matrix can merge these fields without reproducing an entire card for every paper:
 
-### Evidence Matrix
+| Subquestion | Paper/location | Observation/value | Conditions and physical scale | Supported claim | Limits |
+|---|---|---|---|---|---|
 
-| Sub-topic | Paper | Evidence | Value | Condition | Supports | Caveat |
-| --- | --- | --- | --- | --- | --- | --- |
+## Evidence assessment
 
-### Contradiction Matrix
+Assess each consequential claim by directness to the question, relevant controls, uncertainty/resolution, independent replication, and the tested regime. If labels help, use `supported under stated conditions`, `partial support`, or `unresolved`, with the reason beside each label. A technique name alone does not determine strength; an operando correlation may be weaker for a causal question than a controlled ex situ intervention. Computation is evidence for its declared model and assumptions.
 
-| Question | Paper A says | Paper B says | Conflict type | Likely cause | Resolving experiment |
-| --- | --- | --- | --- | --- | --- |
+Preserve source text/table/figure disagreements. Distinguish an absent signal under specified sensitivity from unreported data. A review's citation of an earlier experiment is not an independent repeat of it.
 
-### Evidence Strength Rating
+## Physical distinctions to apply as relevant
 
-Use this scale:
+- **Thermal expansion:** compare thermal-expansion coefficients with their definition, temperature range, crystallographic direction, and phase. Thermal lattice shrinkage is not automatically electrochemical zero strain.
+- **Electrochemical strain:** specify SOC/composition and whether the observation is unit-cell volume, lattice parameter, plane spacing, particle dimension, or electrode thickness. Near-zero volume change can hide anisotropic strain or local distortions.
+- **Device effects:** gas evolution, pouch swelling, composite mechanics, and abuse-test outcomes are not direct measures of lattice strain or interchangeable evidence of safety.
+- **Transport:** distinguish measured/fitted apparent diffusivity from intrinsic transport, and a calculated migration barrier from a diffusion coefficient. Compare method assumptions, pathways, defect/occupancy models, temperature, and composition.
+- **Interfaces and synthesis:** separate coating/doping/phase claims from their characterization limits; track whether particle size, recipe, loading, or history covaries with the proposed cause.
 
-| Rating | Meaning |
-| --- | --- |
-| A | Direct operando/in situ quantitative evidence under relevant conditions |
-| B | Direct ex situ evidence or strong quantitative computation supporting the mechanism |
-| C | Indirect characterization, correlation, or partial evidence |
-| D | Speculative claim, missing controls, or insufficient reporting |
+## Contradictions and synthesis
 
-## Concept Separation Checklist
+Use a compact matrix if helpful:
 
-- Thermal NTE: temperature-driven lattice shrinkage. Compare coefficient of thermal expansion and temperature range.
-- Electrochemical zero strain: Li insertion/extraction-driven change in unit cell, lattice plane, particle, or electrode dimension.
-- Particle/electrode strain: morphology and composite-level swelling/cracking, not identical to unit-cell strain.
-- Full-cell deformation/safety: pouch swelling, gas, thermal abuse, nail test, or mechanical deformation. These are not direct lattice-strain measurements.
-- Structural framework: crystallographic shear planes, tunnel/block dimensions, cation disorder, and defect chemistry should be tied to transport or strain only when evidence exists.
+| Question | Evidence A | Evidence B | Same quantity/state? | Surviving disagreement | Resolving control |
+|---|---|---|---|---|---|
 
-## Chinese Wording Templates
+First test whether shared terminology masks different quantities, scales, conditions, or normalizations. If conflict remains, preserve competing explanations and identify the evidence needed to discriminate them. Do not force a common mechanism or count papers as votes.
 
-### Scope
-
-本报告不做逐篇全文综述，而是围绕`[主题]`进行跨文献证据提取和机制整合。分析重点包括`[子问题1]`、`[子问题2]`和`[子问题3]`，并区分原文直接报道、作者解释与跨文献推断。
-
-### Contradiction
-
-两篇文献表面上均使用`[术语]`，但物理层级不同：`[文献A]`讨论的是`[层级A]`，而`[文献B]`讨论的是`[层级B]`。因此二者不一定构成直接矛盾，更可能反映了测试尺度和状态变量不同。
-
-### Gap
-
-现有研究的关键空白不是缺少性能数据，而是缺少能够同时连接`[结构变量]`、`[中间机制]`和`[目标性质]`的原位/定量证据链。后续可通过`[实验]`在`[条件]`下验证，如果观察到`[预期信号]`，则可支持`[机制]`；若出现`[反例信号]`，则需要修正该机制。
-
-### Innovation
-
-可创新点应从"再做一种材料"转向"验证并调控一个可量化机制"。例如，以`[结构参数]`为调控变量，结合`[表征/计算]`追踪`[目标性质]`，有望把经验性的性能提升转化为可预测的结构设计规则。
+A full report can combine question and verdict, concept definitions, evidence matrix, quantitative comparisons, mechanism limits, and unresolved issues. Add innovation directions or review/PPT wording when requested. For each proposed mechanism test, state the controlled variable, expected observation, falsifying result, and main risk. Bound novelty to the literature actually searched.

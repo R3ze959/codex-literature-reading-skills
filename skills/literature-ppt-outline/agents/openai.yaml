@@ -1,0 +1,4 @@
+interface:
+  display_name: "Literature PPT Outline"
+  short_description: "基于文献解析报告生成逐页PPT大纲配图讲稿与讲解备注"
+  default_prompt: "Use $literature-ppt-outline to draft a Chinese literature presentation outline with verified source figures and speaker notes, delegating independent preparation when useful."
