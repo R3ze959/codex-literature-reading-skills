@@ -1,5 +1,16 @@
 # Codex 文献阅读 Skills
 
+<details>
+<summary>☕ 支持作者</summary>
+
+如果这个项目对你有帮助，欢迎自愿赞赏，支持后续维护。感谢你的支持！
+
+使用微信扫描下方收款码：
+
+<img src="https://raw.githubusercontent.com/R3ze959/eis-drt-batch-analysis-skill/main/.github/assets/wechat-pay.jpg" alt="微信赞赏收款码" width="280" />
+
+</details>
+
 五个面向中文科研阅读的技能：全文翻译、单篇解析、多篇材料综述、专题证据比较，以及文献汇报大纲。适合材料、电池、电化学等研究，也可按论文实际领域使用。
 
 此次更新面向 GPT-6 Astra：缩短常驻指令，把模板和排版细节放到按需读取的 references；明确子代理分工和主代理复核。精简的是指令，完整阅读所需的原文、图表、方法和证据覆盖仍然保留。技能继承当前模型设置，不切换模型、不需要额外 LLM API 密钥，也不保证特定模型的效果。
@@ -96,14 +107,3 @@ python3 -m unittest discover -s tests -v
 ```
 
 技能结构另可用 Codex `skill-creator` 的 `scripts/quick_validate.py` 逐个检查；结构检查不能替代真实任务中的来源核查、科学判断和版面检查。
-
-<details>
-<summary>☕ 支持作者</summary>
-
-如果这个项目对你有帮助，欢迎自愿赞赏，支持后续维护。感谢你的支持！
-
-使用微信扫描下方收款码：
-
-<img src="https://raw.githubusercontent.com/R3ze959/eis-drt-batch-analysis-skill/main/.github/assets/wechat-pay.jpg" alt="微信赞赏收款码" width="280" />
-
-</details>
