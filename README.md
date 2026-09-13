@@ -96,3 +96,14 @@ python3 -m unittest discover -s tests -v
 ```
 
 技能结构另可用 Codex `skill-creator` 的 `scripts/quick_validate.py` 逐个检查；结构检查不能替代真实任务中的来源核查、科学判断和版面检查。
+
+<details>
+<summary>☕ 支持作者</summary>
+
+如果这个项目对你有帮助，欢迎自愿赞赏，支持后续维护。感谢你的支持！
+
+使用微信扫描下方收款码：
+
+<img src="https://raw.githubusercontent.com/R3ze959/eis-drt-batch-analysis-skill/main/.github/assets/wechat-pay.jpg" alt="微信赞赏收款码" width="280" />
+
+</details>
